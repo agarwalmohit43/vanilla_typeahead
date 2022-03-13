@@ -1,0 +1,15 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.suggestion {
+  width: 200px;
+  border: 1px solid black;
+}
+
+.search {
+  width: 200px;
+}
