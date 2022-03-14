@@ -23,6 +23,7 @@ function searchQuery(query) {
     div.setAttribute("class", "new-suggestion-item");
 
     var paragraph = document.createElement("p");
+    paragraph.setAttribute("class", "items-text");
     paragraph.innerHTML = query + " " + i;
 
     var line = document.createElement("hr");

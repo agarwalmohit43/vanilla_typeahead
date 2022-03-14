@@ -6,7 +6,7 @@
 }
 
 .suggestion {
-  width: 200px;
+  width: 450px;
   border: 1px solid black;
   animation-name: example;
   display: flex;
@@ -25,10 +25,12 @@
 }
 
 .inputSearch {
+  width: 450px;
+  height: 32px;
   text-align: center;
-  border-radius: 10px;
-  border: 1px solid black;
-  width: 200px;
+  border-radius: 5px;
+  /* margin: 0 16px 0 32px; */
+  /* padding: 0 12px; */
 }
 
 .open-suggestion {
@@ -37,10 +39,15 @@
 }
 
 .new-suggestion-item {
+  /* box-sizing: border-box; */
   overflow: auto;
   width: 100%;
   transform-origin: 50% 0;
   animation: append-animate-list 0.3s linear;
+}
+
+.items-text {
+  padding-left: 20px;
 }
 
 @keyframes append-animate-openSuggestion {
