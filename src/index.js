@@ -7,15 +7,32 @@ searchInput.addEventListener("keyup", (event) => {
     suggestion.innerHTML = "";
     searchQuery(query);
   } else {
-    suggestion.innerHTML = "";
+    suggestion.classList.remove("open-suggestion", "suggestion");
+    suggestion.classList.add("hide-animate");
+    setTimeout(() => {
+      suggestion.classList.remove("hide-animate");
+      suggestion.classList.add("hide");
+    }, 200);
   }
 });
 
 function searchQuery(query) {
-  console.log(query);
-  for (var i = 0; i < 10; i++) {
+  var limit = 10;
+  for (var i = 0; i < limit; i++) {
+    var div = document.createElement("div");
+    div.setAttribute("class", "new-suggestion-item");
+
     var paragraph = document.createElement("p");
     paragraph.innerHTML = query + " " + i;
-    suggestion.appendChild(paragraph);
+
+    var line = document.createElement("hr");
+
+    div.appendChild(paragraph);
+    if (i < limit - 1) {
+      div.appendChild(line);
+    }
+    suggestion.appendChild(div);
   }
+  suggestion.classList.remove("hide");
+  suggestion.classList.add("open-suggestion", "suggestion");
 }

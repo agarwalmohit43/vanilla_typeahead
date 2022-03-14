@@ -8,8 +8,70 @@
 .suggestion {
   width: 200px;
   border: 1px solid black;
+  animation-name: example;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.search {
+.hide {
+  display: none;
+}
+
+.hide-animate {
+  transform-origin: 50% 0;
+  animation: append-animate-closeSuggestion 0.7s;
+}
+
+.inputSearch {
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
   width: 200px;
+}
+
+.open-suggestion {
+  transform-origin: 50% 0;
+  animation: append-animate-openSuggestion 0.3s linear;
+}
+
+.new-suggestion-item {
+  overflow: auto;
+  width: 100%;
+  transform-origin: 50% 0;
+  animation: append-animate-list 0.3s linear;
+}
+
+@keyframes append-animate-openSuggestion {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes append-animate-closeSuggestion {
+  from {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes append-animate-list {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
