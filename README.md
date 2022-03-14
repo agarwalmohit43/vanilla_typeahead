@@ -1,6 +1,6 @@
 # vanilla_typeahead
 Created with CodeSandbox
 
-<a href="https://codesandbox.io/s/github/agarwalmohit43/vanilla_typeahead/tree/main/">CodeSandbox</a>
+<a href="https://codesandbox.io/s/modest-cloud-xnetys?file=/src/index.js">CodeSandbox</a>
 
-<a href="https://t0jx0w.csb.app/">Demo</a>
+<a href="https://xnetys.csb.app/">Demo</a>
